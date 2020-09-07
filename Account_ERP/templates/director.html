@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Customer panel </title>
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+        <style>
+            .btn{
+               
+                    border: 0;
+                    background: none;
+                    display: block;
+                    margin: 20px auto ; 
+                    text-align: center ; 
+                    border: 2px solid green; 
+                    padding: 14px 40px ; 
+                    width: 300px;
+                    outline: none;
+                    color: white;
+                    border-radius: 24px;
+                    transition: 0.25s;
+                    cursor: pointer ;
+            }
+            .btn:hover{
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+      
+   
+        <form class="box" method="POST" action="submit">
+            {% csrf_token %}
+            <h1>Director registration Page</h1>
+            
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="dob" placeholder="D.O.B.">
+            <input type="text" name="number" placeholder="Mobile NO.">
+            <input type="text" name="share" placeholder="Share Pattern">
+            <input type="text" name="education" placeholder="Education">
+            <input type="text" name="din" placeholder="DIN No.">
+            <input type="text" name="gender" placeholder="Gender">
+            <input type="text" name="email" placeholder="Email id">
+            <input type="text" name="pan" placeholder="PAN no.">
+            <input type="text" name="occupation" placeholder="Occupation">
+            
+            <input type="submit" class="btn">
+        </form>
+      
+    </body>
+</html>

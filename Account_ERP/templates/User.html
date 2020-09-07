@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Customer panel </title>
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+        <style>
+            .btn{
+               
+                    border: 0;
+                    background: none;
+                    display: block;
+                    margin: 20px auto ; 
+                    text-align: center ; 
+                    border: 2px solid green; 
+                    padding: 14px 40px ; 
+                    width: 300px;
+                    outline: none;
+                    color: white;
+                    border-radius: 24px;
+                    transition: 0.25s;
+                    cursor: pointer ;
+            }
+            .btn:hover{
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+      
+   
+        <form class="box" method="GET" >
+            <h1>User</h1>
+            
+            <a href=""><input type="button" class="btn" value="Sign up"></a>
+            <a href=""><input type="button" class="btn" value="Login"></a>
+            <a href=""><input type="button" class="btn" value="Change Password"></a>
+        </form>
+      
+    </body>
+</html>
